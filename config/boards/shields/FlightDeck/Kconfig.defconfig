@@ -3,4 +3,4 @@ if SHIELD_FLIGHTDECK
 config ZMK_KEYBOARD_NAME
     default "FlightDeck"
 
-    endif
+endif
