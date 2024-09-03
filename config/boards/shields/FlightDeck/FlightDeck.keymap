@@ -1,0 +1,44 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+// ------------------------------------------------------------
+// |             |  N2  |   N4  |   N6    |         |         |
+// |  MO(1)      |  N1  |   N3  |   N5    | L_thumb | R_thumb |
+// ------------------------------------------------------------
+            bindings = < &mo 1  
+            &kp N1
+            &kp N2
+            &kp N3
+            &kp N4
+            &kp N5
+            &kp N6 >;
+            
+            };
+
+         nav_layer {
+// --------------------------
+// | BT_CLR |  HOME |  PGUP |
+// | _      |  END  |  PGDN |
+// | _      |  _    |  _    |
+// | _      |  _    |  _    |
+// --------------------------
+// ------------------------------------------------------------
+// |             |  N2  |   N4  |   N6    |         |         |
+// |  none       |  N1  |   N3  |   N5    | L_thumb | R_thumb |
+// ------------------------------------------------------------
+            bindings = < &none
+            &kp K1
+            &kp K2
+            &kp K3
+            &kp K4
+            &kp K5
+            &kp K6 >;
+         };
+    };
+};
